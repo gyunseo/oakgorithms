@@ -20,6 +20,42 @@
 
 ## Execution Environment
 
+### OS
+
+```zsh
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.3 LTS
+Release:        22.04
+Codename:       jammy
+```
+
+### `Python` Runtime
+
+Python 3.11.6
+
+### external libraries
+
+There is no external libraries used in the following source code.
+
+`Pipfile`:
+
+```
+[[source]]
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+cloudinary = "*"
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.6"
+```
+
 ## Source Code
 
 ```python
@@ -100,3 +136,44 @@ if __name__ == "__main__":
     unittest.main()
 
 ```
+
+## Execution Result
+
+```zsh
+pipenv run python3 time_complexity_for_fibonacci_series.py
+```
+
+```zsh
+test for fibonacci series begins
+
+
+
+test_iteration>
+
+elapsed time: 0.000048s
+
+
+.
+
+test_recursive>
+
+elapsed time: 0.000043s
+
+
+.
+test for fibonacci series ended
+
+fibo(1) ~ fibo(45) using iteration: 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811 514229 832040 1346269 2178309 3524578 5702887 9227465 14930352 24157817 39088169 63245986 102334155 165580141 267914296 433494437 701408733 1134903170
+
+fibo(1) ~ fibo(45) using recursion: 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811 514229 832040 1346269 2178309 3524578 5702887 9227465 14930352 24157817 39088169 63245986 102334155 165580141 267914296 433494437 701408733 1134903170
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+```
+
+### Execution Image
+
+![time_complexity_for_fibonacci_series](time_complexity_for_fibonacci_series.png)

@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 
 [dev-packages]
+python-dotenv = "*"
+cloudinary = "*"
 
 [requires]
 python_version = "3.11"
