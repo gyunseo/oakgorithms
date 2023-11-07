@@ -1,3 +1,57 @@
+---
+mainfont: Sarasa Mono K
+monofont: Sarasa Mono K
+CJKmainfont: Sarasa Mono K
+CJKmonofont: Sarasa Mono K
+---
+
+# Transform and Conquer the Best Problem Report
+
+### 2019311801 이균서
+
+## Execution Environment
+
+### OS
+
+```zsh
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.3 LTS
+Release:        22.04
+Codename:       jammy
+```
+
+### `Python` Runtime
+
+Python 3.11.6
+
+### external libraries
+
+There is no external libraries used in the following source code.
+
+`Pipfile`:
+
+```
+[[source]]
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+cloudinary = "*"
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.6"
+```
+
+\newpage
+
+## Source Code
+
+```python
 # Copyright 2023 gyunseo
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -123,3 +177,41 @@ if not trie.check_word_exist(target_word):
 else:
     print(" ".join(trie.get_word_with_prefix(target_word)))
     print("\n")
+
+
+```
+
+\newpage
+
+## Execution Result
+
+### how to run:
+
+```zsh
+pipenv --python 3.11
+pipenv run python3 main.py
+```
+
+or
+
+```zsh
+python3 main.py
+```
+
+### input:
+
+```zsh
+hell
+```
+
+### result:
+
+```zsh
+hell hello
+```
+
+- 실행이 안되면 <https://github.com/gyunseo/oakgorithms.git>을 `git clone` 하여, root directory에서 `pipenv install`을 하시고 `transfrom-and-conquer/the-best-problem/`로 이동하셔서 `pipenv run python3 main.py`를 하시면 됩니다.
+
+## Execution Image
+
+![Alt text](image.png)
