@@ -82,4 +82,4 @@ jaeseo: ppt(70)->backend(130)
 
 ## Execution Image
 
-![Alt text](image.png)
+![실행 결과](image.png)
