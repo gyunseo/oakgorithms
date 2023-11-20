@@ -324,23 +324,31 @@ int main()
     init_RBTree(&tree);
     Node *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
     a = new_node(13);
-    b = new_node(10);
-    c = new_node(15);
-    d = new_node(5);
-    e = new_node(7);
-    //    f = new_node(11);
+    b = new_node(8);
+    c = new_node(17);
+    d = new_node(1);
+    e = new_node(11);
+    f = new_node(15);
+    g = new_node(25);
+    h = new_node(6);
+    i = new_node(22);
+    j = new_node(27);
     rb_insert(&tree, a);
     rb_insert(&tree, b);
     rb_insert(&tree, c);
     rb_insert(&tree, d);
     rb_insert(&tree, e);
-    //    rb_insert(&tree, f);
+    rb_insert(&tree, f);
+    rb_insert(&tree, g);
+    rb_insert(&tree, h);
+    rb_insert(&tree, i);
+    rb_insert(&tree, j);
 
     print_RBTree(&tree, tree.root, 1);
     printf("\n\n");
-
+    h = new_node(7);
+    rb_insert(&tree, h);
     print_RBTree(&tree, tree.root, 1);
     printf("\n\n");
-
     return 0;
 }
