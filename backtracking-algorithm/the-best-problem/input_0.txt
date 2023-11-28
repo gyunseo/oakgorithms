@@ -1,0 +1,21 @@
+1 18
+19
+4 child 1
+4 child 2
+4 child 3
+4 marry 5
+6 child 5
+6 marry 7
+6 child 8
+8 marry 9
+8 child 10
+10 marry 11
+10 child 12
+12 marry 13
+12 child 14
+14 marry 15
+14 child 16
+16 marry 17
+16 child 18
+18 marry 19
+18 child 20

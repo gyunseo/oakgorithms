@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 anytree = "*"
 binarytree = "*"
+networkx = "*"
 
 [dev-packages]
 python-dotenv = "*"
