@@ -25,11 +25,12 @@ def get_merge_sorted(arr):
         # left, right 둘 중 하나는 끝까지 다 돌았다는 뜻
         # 둘 중 하나만 돌았을 때는 위의 while문에서 이미 merged_arr에 추가가 되었기 때문에
         # 둘 중 하나만 돌았을 때는 그냥 나머지를 다 넣어주면 된다.
-        while left_idx < len(left_arr):
+
+        while left_idx < len(left):
             merged_arr.append(left_arr[left_idx])
             left_idx += 1
 
-        while right_idx < len(right_arr):
+        while right_idx < len(right):
             merged_arr.append(right_arr[right_idx])
             right_idx += 1
 
