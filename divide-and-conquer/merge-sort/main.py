@@ -65,7 +65,7 @@ class MergeSortTest(unittest.TestCase):
         self.end_time = time.time()
         print(f"\n테스트 소요 시간: {self.end_time - self.start_time:4f}s")
 
-    def test_quick_sort(self):
+    def test_merge_sort(self):
         self.assertEqual(
             get_merge_sorted(MergeSortTest.random_numbers),
             MergeSortTest.sorted_random_numbers,
