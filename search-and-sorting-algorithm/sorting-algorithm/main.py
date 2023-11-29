@@ -34,14 +34,17 @@ def get_selection_sorted(arr):
 class SortingAlgorithmTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        print("0~1000까지의 정수 1000개를 랜덤으로 생성합니다.")
-        cls.random_numbers = [random.randint(0, 1000) for _ in range(50)]
+        print("0~1000까지의 정수 500개를 랜덤으로 생성합니다.")
+        cls.random_numbers = [random.randint(0, 1000) for _ in range(500)]
         cls.sorted_random_numbers = sorted(cls.random_numbers)
         print("Sorting Algorithms 테스트 시작")
 
     @classmethod
     def tearDownClass(cls) -> None:
         print("\nSorting Algorithms 테스트 종료\n")
+        print(f"선택 정렬 결과: {get_selection_sorted(SortingAlgorithmTest.random_numbers)}")
+        print(f"버블 정렬 결과: {get_bubble_sorted(SortingAlgorithmTest.random_numbers)}")
+        print(f"삽입 정렬 결과: {get_insertion_sorted(SortingAlgorithmTest.random_numbers)}")
 
     def setUp(self) -> None:
         self.start_time = time.time()
