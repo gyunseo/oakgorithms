@@ -63,10 +63,15 @@ def Best_FS():
         if v.bound > maxProfit:
             # Left child node - 따로 저장을 하면 pq에 잘 저장된다.
             level = v.level + 1
-            profit = v.profit + card_objects[level].calculate_discount(W - v.profit)
+            to_be_discounted = card_objects[level].calculate_discount(W - v.profit)
+            if to_be_discounted != 0:
+                profit = v.profit + to_be_discounted
+            else:
+                profit = v.profit
             include = v.include[:]
             u = Node(level, profit, 0.0, include)
-            u.include[level] = 1
+            if profit != v.profit:
+                u.include[level] = 1
             if u.profit > maxProfit:  # 배낭보다는 작아야한다 / Profit이 더 크다면
                 maxProfit = u.profit  # maxProfit 갱신
                 bestset = u.include  # 현재 include를 bestset에 저장
