@@ -1,5 +1,4 @@
 import time, unittest
-from main import get_insertion_sorted
 
 
 def save_sort_procedure(fn):
@@ -12,7 +11,7 @@ def save_sort_procedure(fn):
                 arr[j + 1] = arr[j]
                 j -= 1
             arr[j + 1] = key_val
-            InsertionSortTest.sort_procedure.append(arr[:])
+            InsertionSortTest.sort_procedure.append((arr[:], j + 1))
         return arr
 
     return wrapper
@@ -44,10 +43,10 @@ class InsertionSortTest(unittest.TestCase):
         print("\nInsertion Sort 테스트 종료\n")
 
         print("Insertion Sort 과정을 출력합니다.")
-        # for i, procedure in enumerate(cls.sort_procedure):
-        #     print(f"{i + 1}번째 과정: {procedure}")
-        print(f"{cls.sort_procedure[-8]}")
-        print(f"{cls.sort_procedure[-7]}")
+        print(f"bolded 72 정렬 전: {cls.sort_procedure[-8][0]}")
+        print(
+            f"bolded 72 정렬 후: {cls.sort_procedure[-7][0]}, 삽입된 위치: {cls.sort_procedure[-7][1]}"
+        )
 
     def setUp(self) -> None:
         self.start_time = time.time()
