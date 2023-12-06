@@ -8,6 +8,7 @@ anytree = "*"
 binarytree = "*"
 networkx = "*"
 pandas = "*"
+pyright = "*"
 
 [dev-packages]
 python-dotenv = "*"
