@@ -324,21 +324,28 @@ class AVLtree:
         return output
 
 
-def _test() -> None:
+def _doctest() -> None:
     import doctest
 
     doctest.testmod()
 
 
 if __name__ == "__main__":
-    _test()
-    t = AVLtree()
-    lst = list(range(10))
-    random.shuffle(lst)
-    for i in lst:
-        t.insert(i)
-        print(str(t))
-    random.shuffle(lst)
-    for i in lst:
-        t.del_node(i)
-        print(str(t))
+    t1 = AVLtree()
+    t2 = AVLtree()
+    for i in [random.randint(0, 1000) for _ in range(1000)]:
+        t1.insert(i)
+    print(str(t1))
+    t2.insert(5)
+    t2.insert(3)
+    t2.insert(10)
+    t2.insert(2)
+    t2.insert(4)
+    t2.insert(7)
+    t2.insert(11)
+    t2.insert(1)
+    t2.insert(6)
+    t2.insert(9)
+    t2.insert(12)
+    t2.insert(8)
+    print(str(t2))
